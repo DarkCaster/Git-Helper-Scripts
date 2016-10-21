@@ -1,0 +1,15 @@
+%echo Generating OpenPGP key
+Key-Type: RSA
+Key-Length: 4096
+Key-Usage: sign
+Name-Real: __author__
+Name-Comment: git signkey
+Name-Email: __mail__
+Creation-Date: __date__
+Expire-Date: 50y
+%pubring key.pub
+%secring key.sec
+%ask-passphrase
+%commit
+%echo done
+
